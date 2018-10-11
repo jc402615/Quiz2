@@ -1,8 +1,9 @@
-/***********************************************************************
-	The implementation file for course.h, which describes a college
-	course.
-		John Dolan		School of EECS		Summer2013
-**************************************************************************/
+/**
+*  @file course.cc
+*  @author Aberegg
+*  @brief implementation of course class
+*/
+
 #include "course.h"
 #include<cstdlib>
 #include<iostream>
@@ -15,7 +16,7 @@ course::course(){
 }
 
 void course::input(std::istream& ins){
-    if(ins == cin){
+    if(&ins == &cin){
 	cout<<"Course Number: ";
 	if(ins.peek() == '\n') ins.ignore();
     	getline(ins, course_number);
@@ -40,7 +41,7 @@ void course::input(std::istream& ins){
 }
 
 void course::output(std::ostream& outs)const{
-    if(outs == cout){
+    if(&outs == &cout){
 	outs<<"Course Number:"<<course_number<<endl;
 	outs<<"Grade received:"<<grade<<endl;
 	outs<<"Credit hours:"<<setprecision(2)<<hours<<endl;
@@ -74,6 +75,12 @@ void course::set_course(std::string num, std::string grad, double hrs){
 	grade = grad;
 	hours = hrs;
 }
+	/**
+	* @param num the course number of the class
+	* @param grad the grade received in the class
+	* @param hrs the number of credit hours that the class is worth
+	* @return void
+	*/
 
 istream& operator >>(istream& ins, course& c){
     c.input(ins);
@@ -89,3 +96,4 @@ void course::upper_course(){
     for(int i =0; i<course_number.length(); ++i)
 	course_number[i] = toupper(course_number[i]);
 }
+

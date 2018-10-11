@@ -1,11 +1,7 @@
-/***********************************************************************8
-	This class stores the three essential features of a completed 
-	college course: the course number, the grade received, and the 
-	credit hours for the course. The get_number_grade will return the 
-	numeric equivalent of a letter grade as used in the standard 4 
-	point system.
-		John Dolan	School of EECS		Summer 2013
-************************************************************************/
+/**
+*  @file course.h
+*  @author Aberegg
+*/
 
 #include<iostream>
 #include<string>
@@ -25,6 +21,9 @@ class course{
 	std::string get_grade()const{
 	    return grade;
 	}
+	/**
+	* @return string the value of the grade, should only be of length one
+	*/
 	double get_hours()const{
 	    return hours;
     	}

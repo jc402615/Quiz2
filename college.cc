@@ -1,9 +1,8 @@
-//********************
-//Matthew Aberegg
-//Project 3
-//CS 2401
-//10/8/2015
-//********************
+/**
+*  @file college.cc
+*  @author Aberegg
+*  @brief college class implementation file
+*/
 #include "college.h"
 #include<cstdlib>
 #include<iostream>
@@ -156,6 +155,10 @@ double College::hours(){
 return hours;
 }
 
+	/**
+	* @brief returns the total number of hours taken
+	* @return double the number of credit hours taken 
+	*/
 double College::gpa(){
 	node * ptr;
 	ptr = head;
@@ -166,6 +169,10 @@ double College::gpa(){
 	}
 	return (sum / hours());
 } 
+/**
+* @brief calculates the gpa
+* @return double the gpa calculated
+*/
 
 void College::save(std::ostream& outs){
 	node * ptr;

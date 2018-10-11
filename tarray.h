@@ -1,12 +1,9 @@
-/*********************************************************************
-	This is a class to introduce you to the syntax of working with 
-	template classes. Notice that the type being stored is completely
-	anonymous.
-	Your assignment is to implent the eight functions listed in this 
-	header in a tarray.template file.
-		Lab 7		Fall 2014
-	John Dolan			Ohio University 
-********************************************************************/
+/**
+*  @file tarray.h
+*  @author Aberegg
+*  @brief dynamic template array class
+*/
+
 
 #include<iostream>
 
@@ -20,6 +17,9 @@ class Tarray{
 	//array.
 	// If the array is full, resize is called.
 	void add(T item);
+	/**
+	* @param item the data type to insert into the array
+	*/
 
 	// iterator functions
 

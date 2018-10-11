@@ -1,9 +1,8 @@
-//********************
-//Matthew Aberegg
-//Project 3
-//CS 2401
-//10/8/2015
-//********************
+/**
+*  @file college.h
+*  @author Aberegg
+*  @brief college class that contains a name and a pointer
+*/
 
 #include <iostream>
 #include <fstream>
